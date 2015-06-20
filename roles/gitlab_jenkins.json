@@ -1,0 +1,14 @@
+{
+  "name": "gitlab_jenkins",
+  "default_attributes": {},
+  "override_attributes": {},
+  "json_class": "Chef::Role",
+  "description": "",
+  "chef-type": "role",
+  "run_list": [
+    "recipe[jdk]",
+    "recipe[ant]",
+    "recipe[gitlab]",
+    "recipe[jenkins]"
+  ]
+}
