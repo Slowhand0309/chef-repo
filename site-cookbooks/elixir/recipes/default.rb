@@ -39,7 +39,7 @@ bash "make" do
   action :run
 end
 
-# create symbliclink
+# create symbolic link
 link node[:elixir][:link] do
   to "#{node[:elixir][:source][:path]}/bin"
 end
