@@ -1,6 +1,6 @@
 name             'ant'
-maintainer       'YOUR_COMPANY_NAME'
-maintainer_email 'YOUR_EMAIL'
+maintainer       'Slowhand0309'
+maintainer_email 'slowhand0309@gmail.com'
 license          'All rights reserved'
 description      'Installs/Configures ant'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
