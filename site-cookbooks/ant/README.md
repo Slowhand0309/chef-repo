@@ -1,23 +1,10 @@
 ant Cookbook
 ============
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
-
-Requirements
-------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
-
-e.g.
-#### packages
-- `toaster` - ant needs toaster to brown your bagel.
+This cookbook for install ant.
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
 
-e.g.
 #### ant::default
 <table>
   <tr>
@@ -27,19 +14,35 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['ant']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['ant']['version']</tt></td>
+    <td>String</td>
+    <td>install ant version</td>
+    <td><tt>1.8.2</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['ant']['home']</tt></td>
+    <td>String</td>
+    <td>ant home path</td>
+    <td><tt>/usr/local/ant</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['ant']['url']</tt></td>
+    <td>String</td>
+    <td>ant binaries url</td>
+    <td><tt>[here](http://archive.apache.org/dist/ant/binaries/) + apache-ant-#{node['ant']['version']}-bin.tar.gz</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['ant']['checksum']</tt></td>
+    <td>String</td>
+    <td>binaries checksum</td>
+    <td><tt>check [here](http://archive.apache.org/dist/ant/binaries/)</tt></td>
   </tr>
 </table>
 
 Usage
 -----
 #### ant::default
-TODO: Write usage instructions for each cookbook.
 
-e.g.
 Just include `ant` in your node's `run_list`:
 
 ```json
@@ -51,18 +54,6 @@ Just include `ant` in your node's `run_list`:
 }
 ```
 
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
-
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: [Slowhand0309](https://github.com/Slowhand0309)

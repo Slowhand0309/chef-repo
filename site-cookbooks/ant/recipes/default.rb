@@ -2,20 +2,18 @@
 # Cookbook Name:: ant
 # Recipe:: default
 #
-# Copyright 2015, jf-orange
-#
-# All rights reserved - Do Not Redistribute
+# Copyright 2015, Slowhand0309
 #
 
 ant_home = node['ant']['home']
 
-# ファイル取得
+# get archive file
 remote_file "/tmp/ant.tar.gz" do
   source node['ant']['url']
   checksum node['ant']['checksum']
 end
 
-# 取得したファイルを解凍し移動
+# Decompression of files and move
 script "install_ant" do
   not_if 'which ant'
   interpreter "bash"
@@ -27,7 +25,7 @@ script "install_ant" do
   EOL
 end
 
-# 環境変数の設定
+# Setting environment
 template "/etc/profile.d/ant_home.sh" do
   mode 0755
   source "ant_home.sh.erb"
