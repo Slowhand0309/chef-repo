@@ -2,7 +2,7 @@
 # Cookbook Name:: elixir
 # Attributes:: default
 
-default['elixir']['version'] = '1.0.5'
+default['elixir']['version'] = '1.2.3'
 default['elixir']['home'] = '/usr/local/elixir'
 default['elixir']['link'] = '/usr/local/elixir/bin'
 default['elixir']['repo'] = "https://github.com/elixir-lang/elixir.git"
